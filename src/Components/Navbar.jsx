@@ -2,20 +2,20 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar max-w-6xl mx-auto">
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">BookWorm</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink to='/'>Home</NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to='listedBooks'>Listed Books</NavLink>
+            <NavLink to="listedBooks">Listed Books</NavLink>
           </li>
           <li>
-            <NavLink to='/pagesToRead'>Pages to Read</NavLink>
+            <NavLink to="/pagesToRead">Pages to Read</NavLink>
           </li>
         </ul>
       </div>

@@ -1,8 +1,6 @@
-
-
 const BookDetails = () => {
   return (
-    <div className="bg-gray-800 text-gray-50">
+    <div className="bg-gray-800 text-gray-50 max-w-6xl mx-auto">
       <div className="container grid grid-cols-12 mx-auto">
         <div
           className="flex flex-col justify-center col-span-12 align-middle bg-gray-700 bg-no-repeat bg-cover lg:col-span-6 lg:h-auto"

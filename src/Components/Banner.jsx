@@ -5,10 +5,10 @@ const Banner = () => {
         <a
           rel="noopener noreferrer"
           href="#"
-          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-[#1313130D]"
+          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-[#1313130D] justify-center items-center"
         >
-          <div className="p-6 space-y-2 lg:col-span-5">
-            <h3 className="text-2xl font-semibold sm:text-4xl">
+          <div className="p-6 space-y-2 lg:col-span-5 flex flex-col justify-center items-start ml-10">
+            <h3 className="text-2xl font-semibold sm:text-4xl mb-3">
               Books to freshen up your bookshelf
             </h3>
             <button className="btn bg-[#59C6D2]">View The List</button>
@@ -20,7 +20,9 @@ const Banner = () => {
           />
         </a>
 
-        <div className="my-10 text-4xl font-bold flex justify-center">Books</div>
+        <div className="my-10 text-4xl font-bold flex justify-center">
+          Books
+        </div>
 
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <a
