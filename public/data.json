@@ -1,0 +1,148 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "Spine of the Dragon",
+        "author": "Kevin J. Anderson",
+        "image": "https://i.ibb.co/yPnTFV0/3bcfd9c77441e2cf5d6ab35d6cfaca63.png",
+        "review": "A captivating fantasy epic filled with intricate world-building and gripping characters.",
+        "totalPages": 560,
+        "rating": 4.2,
+        "category": "Fantasy",
+        "tags": [
+            "Epic Fantasy",
+            "Adventure"
+        ],
+        "publisher": "Tor Books",
+        "yearOfPublishing": 2019
+    },
+    {
+        "bookId": 2,
+        "bookName": "Annotated Texas Family Code",
+        "author": "Editorial Staff",
+        "image": "https://i.ibb.co/4mvhFnh/4f3957e8f023d8d60bae77fda6c15279.png",
+        "review": "An indispensable reference guide for legal professionals and anyone interested in family law in Texas.",
+        "totalPages": 1500,
+        "rating": 4.6,
+        "category": "Law",
+        "tags": [
+            "Legal",
+            "Reference"
+        ],
+        "publisher": "West Academic Publishing",
+        "yearOfPublishing": 2020
+    },
+    {
+        "bookId": 3,
+        "bookName": "The Scholarship Monthly Planner",
+        "author": "Jane Doe",
+        "image": "https://i.ibb.co/SPnYCR6/9d64556d757ca419326dbb22159ff2ae.png",
+        "review": "A comprehensive planner to help students organize their scholarship applications and deadlines effectively.",
+        "totalPages": 200,
+        "rating": 4.8,
+        "category": "Education",
+        "tags": [
+            "Planner",
+            "Scholarship",
+            "Organization"
+        ],
+        "publisher": "Random House",
+        "yearOfPublishing": 2021
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Lost Art of Good Conversation",
+        "author": "Sakyong Mipham",
+        "image": "https://i.ibb.co/k25jtYm/642f797cd362e163b10280a18e873752.png",
+        "review": "A thought-provoking exploration of the importance of genuine human connection through meaningful conversations.",
+        "totalPages": 240,
+        "rating": 4.5,
+        "category": "Self-Help",
+        "tags": [
+            "Communication",
+            "Personal Growth"
+        ],
+        "publisher": "Harmony",
+        "yearOfPublishing": 2017
+    },
+    {
+        "bookId": 5,
+        "bookName": "Cold Case Christianity",
+        "author": "J. Warner Wallace",
+        "image": "https://i.ibb.co/WHr0BWw/704abe9e421fa597d747e8b4e9bbcfb3.png",
+        "review": "A compelling investigation into the reliability of the New Testament and the case for Christianity.",
+        "totalPages": 288,
+        "rating": 4.7,
+        "category": "Religion",
+        "tags": [
+            "Christianity",
+            "Apologetics",
+            "Evidence"
+        ],
+        "publisher": "David C. Cook",
+        "yearOfPublishing": 2013
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Hate U Give",
+        "author": "Angie Thomas",
+        "image": "https://i.ibb.co/SJjTh7M/ce3004447af28acdb8c6fce01bf120bd.png",
+        "review": "An impactful and timely novel addressing themes of racism, activism, and identity.",
+        "totalPages": 464,
+        "rating": 4.9,
+        "category": "Young Adult",
+        "tags": [
+            "Social Issues",
+            "Coming-of-age"
+        ],
+        "publisher": "Balzer + Bray",
+        "yearOfPublishing": 2017
+    },
+    {
+        "bookId": 7,
+        "bookName": "Loving Jesus More",
+        "author": "Philip Graham Ryken",
+        "image": "https://i.ibb.co/ZzZ25Y4/d3c7344e22a9684793d7a7fb662caac7.png",
+        "review": "A profound exploration of deepening one's love and devotion to Jesus Christ.",
+        "totalPages": 208,
+        "rating": 4.6,
+        "category": "Religion",
+        "tags": [
+            "Faith",
+            "Spirituality"
+        ],
+        "publisher": "Crossway",
+        "yearOfPublishing": 2002
+    },
+    {
+        "bookId": 8,
+        "bookName": "Dating Playbook For Men",
+        "author": "Andrew Ferebee",
+        "image": "https://i.ibb.co/fX8m8Jv/the-dating-playbook-for-men.png",
+        "review": "A comprehensive guide to navigating the complexities of dating and building meaningful relationships.",
+        "totalPages": 324,
+        "rating": 4.4,
+        "category": "Self-Help",
+        "tags": [
+            "Dating",
+            "Relationships"
+        ],
+        "publisher": "Knowledge for Men, LLC",
+        "yearOfPublishing": 2015
+    },
+    {
+        "bookId": 9,
+        "bookName": "Why Do You Hate Money?",
+        "author": "Ramel Jasir",
+        "image": "https://i.ibb.co/1nThcNh/why-do-you-hate-money.png",
+        "review": "An eye-opening exploration of personal finance mindset shifts and strategies for financial freedom.",
+        "totalPages": 272,
+        "rating": 4.7,
+        "category": "Personal Finance",
+        "tags": [
+            "Money Management",
+            "Wealth Building"
+        ],
+        "publisher": "Independently published",
+        "yearOfPublishing": 2022
+    }
+]

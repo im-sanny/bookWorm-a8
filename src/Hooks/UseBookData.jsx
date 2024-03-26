@@ -6,7 +6,7 @@ const UseBookData = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await fetch("https://im-sanny.github.io/fake-data/data.json");
+      const res = await fetch('https://im-sanny.github.io/fake-data/data.json');
       const data = await res.json();
       setData(data);
       setLoading(false);
