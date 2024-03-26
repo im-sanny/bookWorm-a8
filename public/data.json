@@ -92,9 +92,9 @@
     },
     {
         "bookId": 8,
-        "bookName": "https://i.ibb.co/fX8m8Jv/the-dating-playbook-for-men.png",
+        "bookName": "Dating Playbook For Men",
         "author": "Andrew Ferebee",
-        "image": "dating_playbook_for_men.jpg",
+        "image": "https://i.ibb.co/fX8m8Jv/the-dating-playbook-for-men.png",
         "review": "A comprehensive guide to navigating the complexities of dating and building meaningful relationships.",
         "totalPages": 324,
         "rating": 4.4,
