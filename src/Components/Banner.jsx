@@ -3,7 +3,6 @@ import BookCard from "./BookCard";
 
 const Banner = () => {
   const books = useLoaderData();
-  console.log(books);
 
   return (
     <>
@@ -17,8 +16,10 @@ const Banner = () => {
 
             <div className="p-6 space-y-2 lg:col-span-5 flex flex-col justify-center items-start ml-10">
               <h3 className="text-2xl font-semibold sm:text-4xl mb-3">
-              Revitalize your book collection with captivating reads that inspire, engage, and transport your imagination.              </h3>
-              <Link to="/listedBooks" className="btn bg-[#59C6D2] font-bold">
+                Revitalize your book collection with captivating reads that
+                inspire, engage, and transport your imagination.{" "}
+              </h3>
+              <Link to='/' className="btn bg-[#59C6D2] font-bold">
                 View The List
               </Link>
             </div>
@@ -32,9 +33,9 @@ const Banner = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-5">
-          {
-            books.map(book => <BookCard key={books.id} book={book}></BookCard>)
-          }
+          {books.map((book) => (
+            <BookCard key={book.bookId} book={book}></BookCard>
+          ))}
         </div>
       </div>
     </>
