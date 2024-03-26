@@ -14,7 +14,8 @@ const ErrorPage = () => {
           <p className="mt-4 mb-8 text-gray-400 dark:text-gray-600">
             But dont worry, you can find plenty of other things on our homepage.
           </p>
-          <Link to='/'
+          <Link
+            to="/"
             rel="noopener noreferrer"
             href="#"
             className="px-8 py-3 font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50"

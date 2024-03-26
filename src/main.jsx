@@ -15,6 +15,9 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
+      },
+      {
+        
       }
     ],
   },
