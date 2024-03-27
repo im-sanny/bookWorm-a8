@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root/Root";
 import Home from "./Pages/Home";
 import ErrorPage from "./Components/ErrorPage";
+import BookDetails from "./Pages/ListedBooks";
 import ListedBooks from "./Pages/ListedBooks";
+import DetailsBB from "./Pages/DetailsBB";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +20,16 @@ const router = createBrowserRouter([
         loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
       },
       {
-        path: "/listedBooks/:bookId",
+        path: "/detailsBB/:bookId",
+        element:<DetailsBB></DetailsBB>,
+        loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
+      },
+      {
+        path:"/listedBooks",
         element: <ListedBooks></ListedBooks>,
         loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
       },
+      
     ],
   },
 ]);

@@ -4,10 +4,10 @@ import { FaStar } from "react-icons/fa";
 
 const BookCard = ({ book }) => {
   const { bookName, author, image, tags, rating, category, bookId } = book;
-  
+
   return (
     <Link
-      to={`listedBooks/${bookId}`}
+      to={`/detailsBB/${bookId}`}
       className="max-w-6xl mx-auto group transition border-2 hover:scale-105  hover:border-primary border-opacity-35 rounded-lg  p-5 w-[350px]"
     >
       <div className="bg-base-200 rounded-lg flex justify-center">

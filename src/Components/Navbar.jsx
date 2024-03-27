@@ -8,7 +8,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          <li className="mr-2">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -20,7 +20,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/"
+              to="/listedBooks"
               className={({ isActive }) =>
                 isActive ? "text-primary font-bold" : "font-bold"
               }
@@ -28,14 +28,14 @@ const Navbar = () => {
               Listed Books
             </NavLink>
           </li>
-          <li>
+          <li className="ml-2">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive ? "text-primary font-bold" : "font-bold"
               }
             >
-              Pages to Read
+              bututPages to Read
             </NavLink>
           </li>
         </ul>
