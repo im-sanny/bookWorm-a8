@@ -12,7 +12,7 @@ const Navbar = () => {
             <NavLink to="/" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/listedBooks" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Listed Books</NavLink>
+            <NavLink to="/listedBooks/bookId" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Listed Books</NavLink>
           </li>
           <li>
             <NavLink to="/" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Pages to Read</NavLink>
