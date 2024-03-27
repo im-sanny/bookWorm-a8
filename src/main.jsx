@@ -7,6 +7,7 @@ import ErrorPage from "./Components/ErrorPage";
 import BookDetails from "./Pages/ListedBooks";
 import ListedBooks from "./Pages/ListedBooks";
 import DetailsBB from "./Pages/DetailsBB";
+import PagesToRead from "./Pages/PagesToRead";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         element: <ListedBooks></ListedBooks>,
         loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
       },
+      {
+        path: "/pagesToRead",
+        element: <PagesToRead></PagesToRead>,
+      }
       
     ],
   },

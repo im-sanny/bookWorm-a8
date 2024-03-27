@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { BsPeople } from "react-icons/bs";
 import { MdOutlineContactPage } from "react-icons/md";
+import { FcCalendar } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
-const ListCard = ({ list }) => {
+const ListCard = ({ boo }) => {
   const {
     bookName,
     author,
@@ -14,7 +15,7 @@ const ListCard = ({ list }) => {
     totalPages,
     publisher,
     yearOfPublishing,
-  } = list;
+  } = boo;
 
   return (
     <>
@@ -35,9 +36,9 @@ const ListCard = ({ list }) => {
                 #{tag}
               </p>
             ))}
-            <p className="mr-2">
+            <p className="mr-2 flex items-center"> <FcCalendar className="mr-1" size={20}/>
               Year of Publishing:{" "}
-              <span className="font-bold">{yearOfPublishing}</span>
+              <p className="font-bold ml-1"> {yearOfPublishing}</p>
             </p>
           </div>
           <div className="flex items-center "></div>

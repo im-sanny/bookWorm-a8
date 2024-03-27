@@ -12,7 +12,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
               }
             >
               Home
@@ -22,7 +22,7 @@ const Navbar = () => {
             <NavLink
               to="/listedBooks"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
               }
             >
               Listed Books
@@ -30,12 +30,12 @@ const Navbar = () => {
           </li>
           <li className="ml-2">
             <NavLink
-              to="/"
+              to="/pagesToRead"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
               }
             >
-              bututPages to Read
+              Pages to Read
             </NavLink>
           </li>
         </ul>
