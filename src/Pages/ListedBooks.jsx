@@ -14,7 +14,20 @@ const ListedBooks = () => {
 
   const [sort, setSort] = useState([])
 
-  
+  const handleSortFilter = (filter) =>{
+      if (filter === 'all') {
+        setSort(boAA);
+      }
+      else if (filter === 'rating') {
+        const sortedByRating = [...boAA].sort((a, b) => b.rating - a.rating);
+        setSort(sortedByRating);
+      }
+
+      else if (filter === 'yearOfPublishing') {
+        const publishedYear = [...boAA].sort((a, b) => b.yearOfPublishing  - a.yearOfPublishing )
+        setSort(publishedYear)
+      }
+  }
 
   useEffect(() => {
     const storedBookIds = getStoredBook();
@@ -29,7 +42,7 @@ const ListedBooks = () => {
         }
       }
       setBoAA(bookA);
-      setsort(bookA)
+      setSort(boAA);
       // console.log(bookA, booklist, storedBookIds);
     }
   }, [booklist]);
@@ -48,16 +61,13 @@ const ListedBooks = () => {
             Sort <IoIosArrowDropdown size={30} />
           </summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li>
+            <li onClick={() => handleSortFilter('all')}>
               <a>All</a>
             </li>
-            <li>
+            <li onClick={() => handleSortFilter('rating')}>
               <a>Rating</a>
             </li>
-            <li>
-              <a>Number of pages</a>
-            </li>
-            <li>
+            <li onClick={() => handleSortFilter('yearOfPublishing')}>
               <a>Year of Publishing</a>
             </li>
           </ul>
