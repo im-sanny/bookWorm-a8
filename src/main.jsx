@@ -18,11 +18,10 @@ const router = createBrowserRouter([
         loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
       },
       {
-        path:'/listedBooks/:bookId',
+        path: "/listedBooks/:bookId",
         element: <ListedBooks></ListedBooks>,
-        loader: () => fetch ('https://im-sanny.github.io/fake-data/data.json'),
-        
-      }
+        loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
+      },
     ],
   },
 ]);

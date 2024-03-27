@@ -9,13 +9,34 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <NavLink to="/" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Home</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/listedBooks/bookId" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Listed Books</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Listed Books
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/" className={({ isActive }) => isActive? 'text-primary font-bold': 'font-bold'}>Pages to Read</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+            >
+              Pages to Read
+            </NavLink>
           </li>
         </ul>
       </div>

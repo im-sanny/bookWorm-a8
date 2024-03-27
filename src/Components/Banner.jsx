@@ -19,7 +19,10 @@ const Banner = () => {
                 Revitalize your book collection with captivating reads that
                 inspire, engage, and transport your imagination.{" "}
               </h3>
-              <Link to="/listedBooks/bookId" className="btn bg-[#59C6D2] font-bold">
+              <Link
+                to="/listedBooks/:bookId"
+                className="btn bg-[#59C6D2] font-bold"
+              >
                 View The List
               </Link>
             </div>
