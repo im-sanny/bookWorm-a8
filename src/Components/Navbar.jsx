@@ -38,6 +38,26 @@ const Navbar = () => {
               Pages to Read
             </NavLink>
           </li>
+          <li className="ml-2">
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+              }
+            >
+              Blog
+            </NavLink>
+          </li>
+          <li className="ml-2">
+            <NavLink
+              to="/aboutUs"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+              }
+            >
+              About us
+            </NavLink>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">

@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import { saveBook } from "../utility/localStorage";
+import { getStoredBook, saveBook } from "../utility/localStorage";
+import { useState } from "react";
 
 const ShowDetails = () => {
   const bookDetails = useLoaderData();
@@ -9,10 +10,29 @@ const ShowDetails = () => {
   const book = bookDetails.find((book) => book.bookId == idInt);
   console.log(book);
 
-  const handleRead = () =>{
-    saveBook(idInt)
-     toast.success("successfully add to read");}
-  const handleWish = () => toast.success("added in wish list");
+  const [readBooks, setReadBooks] = useState(getStoredBook("readBooks") || []);
+  const [wishList, setWishList] = useState(getStoredBook("wishList") || []);
+
+  const handleRead = () => {
+    if (!readBooks.includes(idInt)) {
+      saveBook("readBooks", idInt);
+      setReadBooks([...readBooks, idInt]);
+      toast.success("Successfully added to read");
+    } else {
+      toast.error("This book is already added to read");
+    }
+  };
+
+  const handleWish = () => {
+    if (!wishList.includes(idInt)) {
+      saveBook("wishList", idInt);
+      setWishList([...wishList, idInt]);
+      toast.success("Added to wish list");
+    } else {
+      toast.error("This book is already added to wish list");
+    }
+  };
+
 
   return (
     <>
@@ -26,7 +46,7 @@ const ShowDetails = () => {
             />
           </div>
 
-          <div className="flex flex-col col-span-12 p-6 divide-y lg:col-span-6 lg:p-10 divide-gray-700">
+          <div className="flex flex-col col-span-12 p-6 lg:col-span-6 lg:p-10">
             <div className="pt-6 pb-4 space-y-2">
               <h1 className="text-3xl font-bold">{book.bookName}</h1>
               <p className="">By: {book.author}</p>

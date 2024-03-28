@@ -7,14 +7,14 @@ const Banner = () => {
   return (
     <>
       <div className="bg-[#1313130D] max-w-6xl mx-auto rounded-lg">
-        <div className="container grid grid-cols-12 mx-auto lg:p-10 ">
-          <div className="bg-no-repeat bg-cover col-span-full lg:col-span-3">
-            <img src={books[7].image} alt="" />
+        <div className="container lg:grid grid-cols-12 mx-auto lg:p-10 ">
+          <div className="bg-no-repeat  lg:p-0 p-10 bg-cover lg:col-span-3">
+            <img className="h-96 flex justify-center items-center lg:h-full" src={books[7].image} alt="" />
           </div>
           <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
             <div className="flex justify-start"></div>
 
-            <div className="p-6 space-y-2 lg:col-span-5 flex flex-col justify-center items-start ml-10">
+            <div className="p-6 space-y-2 lg:col-span-5 flex flex-col justify-center lg:items-start items-center lg:ml-10">
               <h3 className="text-2xl font-semibold sm:text-4xl mb-3">
                 Revitalize your book collection with captivating reads that
                 inspire, engage, and transport your imagination.{" "}
@@ -32,7 +32,7 @@ const Banner = () => {
           Books
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid justify-center grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => (
             <BookCard key={book.bookId} book={book}></BookCard>
           ))}

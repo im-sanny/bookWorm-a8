@@ -8,7 +8,7 @@ const BookCard = ({ book }) => {
   return (
     <Link
       to={`/detailsBB/${bookId}`}
-      className="max-w-6xl mx-auto group transition border-2 hover:scale-105  hover:border-primary border-opacity-35 rounded-lg  p-5 w-[350px]"
+      className="max-w-6xl mx-auto group transition border-2 hover:scale-105  hover:border-primary border-opacity-35 rounded-lg  p-5 w-full"
     >
       <div className="bg-base-200 rounded-lg flex justify-center">
         <img role="presentation" className="  rounded h-44 p-5 " src={image} />
