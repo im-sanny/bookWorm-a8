@@ -8,14 +8,13 @@ const ShowDetails = () => {
   const { bookId } = useParams();
   const idInt = parseInt(bookId);
   const book = bookDetails.find((book) => book.bookId == idInt);
-  console.log(book);
 
-  const [readBooks, setReadBooks] = useState(getStoredBook("readBooks") || []);
-  const [wishList, setWishList] = useState(getStoredBook("wishList") || []);
+  const [readBooks, setReadBooks] = useState(getStoredBook() || []);
+  const [wishList, setWishList] = useState(getStoredBook() || []);
 
   const handleRead = () => {
     if (!readBooks.includes(idInt)) {
-      saveBook("readBooks", idInt);
+      saveBook(idInt);
       setReadBooks([...readBooks, idInt]);
       toast.success("Successfully added to read");
     } else {
@@ -25,14 +24,13 @@ const ShowDetails = () => {
 
   const handleWish = () => {
     if (!wishList.includes(idInt)) {
-      saveBook("wishList", idInt);
+      saveBook(idInt);
       setWishList([...wishList, idInt]);
       toast.success("Added to wish list");
     } else {
       toast.error("This book is already added to wish list");
     }
   };
-
 
   return (
     <>
@@ -46,7 +44,7 @@ const ShowDetails = () => {
             />
           </div>
 
-          <div className="flex flex-col col-span-12 p-6 lg:col-span-6 lg:p-10">
+          <div className="flex flex-col col-span-12 p-6 lg:col-span-6 lg:p-10 divide-gray-700">
             <div className="pt-6 pb-4 space-y-2">
               <h1 className="text-3xl font-bold">{book.bookName}</h1>
               <p className="">By: {book.author}</p>
@@ -93,11 +91,11 @@ const ShowDetails = () => {
                 </p>
               </div>
 
-              <div className="flex gap-5">
-                <button onClick={handleRead} className="btn btn-primary w-20">
+              <div className="flex gap-3">
+                <button onClick={handleRead} className="px-5 btn-sm flex justify-center items-center py-2 w-1/5 border border-yellow-300 bg-blue-100 hover:bg-green-200 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold">
                   Read
                 </button>
-                <button onClick={handleWish} className="btn btn-primary w-20">
+                <button onClick={handleWish} className="px-5 btn-sm flex justify-center items-center w-1/5 py-2 border border-yellow-300 bg-blue-100 hover:bg-green-200 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold">
                   Wishlist
                 </button>
               </div>

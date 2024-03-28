@@ -61,10 +61,10 @@ const TriangleBar = (props) => {
 
 const PagesToRead = () => {
     return (
-        <div className='min-h-[calc(100vh-202px)]'>
+        <div className='min-h-[calc(100vh-202px)] max-w-6xl flex justify-center items-center mx-auto'>
             <BarChart
-      width={500}
-      height={300}
+      width={1000}
+      height={350}
       data={data}
       margin={{
         top: 20,

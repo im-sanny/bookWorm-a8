@@ -55,7 +55,7 @@ const ListedBooks = () => {
           Books
         </div>
       </div>
-      <div className="max-w-6xl mb-28 mx-auto flex justify-center">
+      <div className="max-w-6xl mb-10 mx-auto flex justify-center">
         <details className="dropdown">
           <summary className="m-1 btn bg-green-400 text-2xl text-white font-bold">
             Sort <IoIosArrowDropdown size={30} />

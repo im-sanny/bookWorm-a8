@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="navbar max-w-6xl mx-auto">
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl">BookWorm</a>
+        <a className="btn btn-ghost text-2xl">BookWorm</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -12,7 +12,9 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+                isActive
+                  ? "text-primary font-bold border border-green-300"
+                  : "font-bold text-secondary border border-rose-400"
               }
             >
               Home
@@ -22,7 +24,9 @@ const Navbar = () => {
             <NavLink
               to="/listedBooks"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+                isActive
+                  ? "text-primary font-bold border border-green-300"
+                  : "font-bold text-secondary border border-rose-400"
               }
             >
               Listed Books
@@ -32,7 +36,9 @@ const Navbar = () => {
             <NavLink
               to="/pagesToRead"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+                isActive
+                  ? "text-primary font-bold border border-green-300"
+                  : "font-bold text-secondary border border-rose-400"
               }
             >
               Pages to Read
@@ -42,7 +48,9 @@ const Navbar = () => {
             <NavLink
               to="/blog"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+                isActive
+                  ? "text-primary font-bold border border-green-300"
+                  : "font-bold text-secondary border border-rose-400"
               }
             >
               Blog
@@ -52,7 +60,9 @@ const Navbar = () => {
             <NavLink
               to="/aboutUs"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold border border-green-300" : "font-bold text-secondary border border-rose-400"
+                isActive
+                  ? "text-primary font-bold border border-green-300"
+                  : "font-bold text-secondary border border-rose-400"
               }
             >
               About us
@@ -63,14 +73,14 @@ const Navbar = () => {
       <div className="navbar-end">
         <a
           href="#_"
-          className="relative rounded px-5 py-2.5 overflow-hidden group bg-[#23BE0A] hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300 mr-2"
+          className="relative rounded px-5 py-2 overflow-hidden group bg-[#23BE0A] hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300 mr-2"
         >
           <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
           <span className="relative">Sign In</span>
         </a>
         <a
           href="#_"
-          className="relative rounded px-5 py-2.5 overflow-hidden group bg-[#59C6D2] hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300"
+          className="relative rounded px-5 py-2 overflow-hidden group bg-[#59C6D2] hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300"
         >
           <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
           <span className="relative">Sign Up</span>

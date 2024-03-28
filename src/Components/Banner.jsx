@@ -25,7 +25,7 @@ const Banner = () => {
               </h3>
               <Link
                 to="/listedBooks"
-                className="px-5 py-2.5 font-medium border border-yellow-400 bg-blue-100 hover:bg-green-100 hover:text-blue-600 text-blue-500 text-sm rounded-full"
+                className="px-5 py-2.5 border border-yellow-400 bg-blue-100 hover:bg-green-100 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold"
               >
                 View The List
               </Link>
