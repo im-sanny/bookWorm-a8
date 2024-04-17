@@ -11,11 +11,13 @@ const ReadBooks = () => {
 
   return (
     <div className="">
-      <h2>Read Books:</h2>
       <ul>
-        {readBooks.map((book, index) => (
-          <li key={index}>{book.bookName}</li>
-        ))}
+        {
+        readBooks.map((book, index) => (
+          <li key={index.bookId}>{book.bookName}</li>
+          ))
+        }
+          <h2>Read Books: {readBooks.length}</h2>
       </ul>
     </div>
   );

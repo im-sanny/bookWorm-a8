@@ -10,19 +10,19 @@ import { getStoredBook } from "../utility/localStorage";
 const ListedBooks = () => {
   const booklist = useLoaderData();
 
-  const [boAA, setBoAA] = useState([]);
+  const [book, setBook] = useState([]);
   const [sort, setSort] = useState([]);
 
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleSortFilter = (filter) => {
     if (filter === "all") {
-      setSort(boAA);
+      setSort(book);
     } else if (filter === "rating") {
-      const sortedByRating = [...boAA].sort((a, b) => b.rating - a.rating);
+      const sortedByRating = [...book].sort((a, b) => b.rating - a.rating);
       setSort(sortedByRating);
     } else if (filter === "yearOfPublishing") {
-      const publishedYear = [...boAA].sort(
+      const publishedYear = [...book].sort(
         (a, b) => b.yearOfPublishing - a.yearOfPublishing
       );
       setSort(publishedYear);
@@ -41,9 +41,9 @@ const ListedBooks = () => {
           bookA.push(book);
         }
       }
-      setBoAA(bookA);
-      setSort(boAA);
-      // console.log(bookA, booklist, storedBookIds);
+      setBook(bookA);
+      setSort(book);
+      console.log(bookA, booklist, storedBookIds);
     }
   }, [booklist]);
 
@@ -128,45 +128,41 @@ const ListedBooks = () => {
         {sort.map((book) => (
           <div key={book.bookId}>
             <div className="card lg:max-w-6xl lg:h-64 mx-auto my-5 border-2 p-5 lg:card-side bg-base-100 shadow-xl">
-              <div className="p-5 w-1/5 flex justify-center items-center bg-base-300 rounded-xl">
+              <div className="p-5 lg:w-1/5 flex justify-center items-center bg-base-300 rounded-xl">
                 <img className="h-full" src={book.image} alt="Album" />
               </div>
-              <div className="w-3/5 ml-10">
-                <h1 className="text-2xl lg:text-3xl font-bold ">
-                  {book.bookName}
-                </h1>
+              <div className="lg:w-3/5 lg:ml-10">
+                <h1 className="text-3xl font-bold ">{book.bookName}</h1>
                 <p className="my-2">By: {book.author}</p>
 
-                <div className="flex gap-2 my-2">
-                  {book.tags.map((tag, index) => (
-                    <p
-                      key={index}
-                      className="px-2 py-1 text-xs rounded-full font-bold text-[#23BE0A] bg-[#23BE0A0D]"
-                    >
-                      #{tag}
-                    </p>
-                  ))}
-                  <p className="mr-2 flex items-center">
-                    {" "}
-                    <FcCalendar className="mr-1" size={20} />
-                    Year of Publishing:{" "}
-                    <p className="font-bold ml-1"> {book.yearOfPublishing}</p>
+                <div className="grid grid-cols-2 lg:grid-cols-3  items-center gap-2 my-2">
+                  <p className="px-2 py-1 w-3/5 text-xs rounded-full font-bold text-[#23BE0A] flex justify-center items-center bg-[#23BE0A0D]">
+                    #{book.tags[0]} 
                   </p>
+                  <p className="px-2 py-1 w-3/5 text-xs rounded-full font-bold text-[#23BE0A] flex justify-center items-center bg-[#23BE0A0D]">
+                    #{book.tags[1]} 
+                  </p>
+
+                  <div className="lg:mr-2 flex-row lg:flex justify-between items-center">
+                    <p className="flex justify-center items-center">
+                      <FcCalendar size={20} />
+                      Year of Publishing: {book.yearOfPublishing}
+                    </p>
+                  </div>
                 </div>
                 <div className="flex items-center "></div>
-                <div className="flex gap-5">
-                  <p className="mr-2 flex gap-2 items-center">
+                <div className="lg:flex gap-5">
+                  <p className=" flex gap-2 items-center">
                     <BsPeople /> Publisher:{" "}
-                    <span className="font-bold">{book.publisher}</span>
+                    <span className="lg:font-bold ">{book.publisher}</span>
                   </p>
                   <p className="mr-2 flex gap-2 items-center">
                     <MdOutlineContactPage /> Number of Pages:{" "}
-                    <span className="font-bold">{book.totalPages}</span>
+                    <span className="lg:font-bold">{book.totalPages}</span>
                   </p>
                 </div>
-
                 <div className="divider "></div>
-                <div className="flex gap-5">
+                <div className="flex lg:gap-5 gap-1">
                   <Link
                     to={""}
                     button

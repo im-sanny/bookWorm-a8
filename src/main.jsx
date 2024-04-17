@@ -10,7 +10,7 @@ import PagesToRead from "./Pages/PagesToRead";
 import ReadBooks from "./Components/ReadBooks";
 import Wishlist from "./Components/Wishlist";
 import Blog from "./Pages/Blog";
-import AboutUS from "./Pages/AboutUS"
+import AboutUS from "./Pages/AboutUS";
 
 const router = createBrowserRouter([
   {
@@ -50,15 +50,16 @@ const router = createBrowserRouter([
       {
         path: "pagesToRead",
         element: <PagesToRead></PagesToRead>,
+        loader: () => fetch("https://im-sanny.github.io/fake-data/data.json"),
       },
       {
         path: "/blog",
-          element: <Blog></Blog>,
-          loader: () => fetch("https://dev.to/api/articles?per_page=20&top=7")
+        element: <Blog></Blog>,
+        loader: () => fetch("https://dev.to/api/articles?per_page=20&top=7"),
       },
       {
         path: "/aboutUs",
-        element: <AboutUS></AboutUS>
+        element: <AboutUS></AboutUS>,
       },
     ],
   },

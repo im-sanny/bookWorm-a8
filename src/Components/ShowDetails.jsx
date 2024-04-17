@@ -8,13 +8,13 @@ const ShowDetails = () => {
   const { bookId } = useParams();
   const idInt = parseInt(bookId);
   const book = bookDetails.find((book) => book.bookId == idInt);
-
+  console.log(book);
   const [readBooks, setReadBooks] = useState(getStoredBook() || []);
   const [wishList, setWishList] = useState(getStoredBook() || []);
 
   const handleRead = () => {
     if (!readBooks.includes(idInt)) {
-      saveBook(idInt);
+      saveBook(idInt, book);
       setReadBooks([...readBooks, idInt]);
       toast.success("Successfully added to read");
     } else {
@@ -24,7 +24,7 @@ const ShowDetails = () => {
 
   const handleWish = () => {
     if (!wishList.includes(idInt)) {
-      saveBook(idInt);
+      saveBook(idInt, book);
       setWishList([...wishList, idInt]);
       toast.success("Added to wish list");
     } else {
@@ -92,10 +92,16 @@ const ShowDetails = () => {
               </div>
 
               <div className="flex gap-3">
-                <button onClick={handleRead} className="px-5 btn-sm flex justify-center items-center py-2 w-1/5 border border-yellow-300 bg-blue-100 hover:bg-green-200 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold">
+                <button
+                  onClick={handleRead}
+                  className="px-5 btn-sm flex justify-center items-center py-2 w-1/5 border border-yellow-300 bg-blue-100 hover:bg-green-200 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold"
+                >
                   Read
                 </button>
-                <button onClick={handleWish} className="px-5 btn-sm flex justify-center items-center w-1/5 py-2 border border-yellow-300 bg-blue-100 hover:bg-green-200 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold">
+                <button
+                  onClick={handleWish}
+                  className="px-5 btn-sm flex justify-center items-center w-1/5 py-2 border border-yellow-300 bg-blue-100 hover:bg-green-200 hover:text-blue-600 text-blue-500 text-sm rounded-full font-bold"
+                >
                   Wishlist
                 </button>
               </div>
